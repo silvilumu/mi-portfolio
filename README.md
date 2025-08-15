@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --fg: #ffffff;
+            --accent-1: #c447b9;
+            --accent-2: #80c75c;
+            --accent-3: #d1c0f6;
+            --font: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--fg);
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font);
+            text-align: center;
+        }
+
+        .cambio-palabra-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .palabra-inicial {
+            transition: opacity 0.3s ease;
+        }
+        .palabra-final {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .cambio-palabra-container:hover .palabra-inicial {
+            opacity: 0;
+        }
+        .cambio-palabra-container:hover .palabra-final {
+            opacity: 1;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 1;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>
+            <a href="conoceme.html">
+                <span class="cambio-palabra-container">
+                    <span class="palabra-inicial">CLICK</span>
+                    <span class="palabra-final" style="color: #c447b9;">CONOCEME</span>
+                </span>
+            </a>
+        </h1>
+        <h1>
+            <a href="proyectos.html">
+                <span class="cambio-palabra-container">
+                    <span class="palabra-inicial">CLICK</span>
+                    <span class="palabra-final" style="color: #80c75c;">PROYECTOS</span>
+                </span>
+            </a>
+        </h1>
+        <h1>
+            <a href="contacto.html">
+                <span class="cambio-palabra-container">
+                    <span class="palabra-inicial">CLICK</span>
+                    <span class="palabra-final" style="color: #d1c0f6;">CONTACTOS</span>
+                </span>
+            </a>
+        </h1>
+    </section>
+</body>
+</html>
